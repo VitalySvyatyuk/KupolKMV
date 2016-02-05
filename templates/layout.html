@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html {% block html_attribs %}{% endblock html_attribs %}>
+
+<head>
+    <title>{% block title %}Кровля Пятигорск{% endblock title %}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/my_styles.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand text-muted" href="/">Купол КМВ</a>
+            <div class="collapse navbar-collapse">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="/">Услуги</a></li>
+                    <li><a href="/materials">Кровельные материалы</a></li>
+                    <li><a href="/portfolio">Наши работы</a></li>
+                    <li><a href="/reviews">Отзывы</a></li>
+                    <li><a href="/about">О нас</a></li>
+                    <li><a href="/contacts">Контакты</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="myCarousel" class="carousel slide">
+        <div class="container">
+            <ol class="carousel-indicators">
+                <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="static/img/carousel_1.png" alt="первая картинка">
+                    <div class="carousel-caption">
+                        какой-нибудь каппшн
+                    </div>
+                </div>
+                <div class="item">
+                    <p>Advertisment #2!</p>
+                </div>
+                <div class="item">
+                    <p>And Advertisment #3!</p>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </div>
+
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+</body>
+</html>
