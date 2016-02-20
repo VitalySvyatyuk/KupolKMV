@@ -25,6 +25,11 @@ def reviews():
     return render_template('reviews.html')
 
 
+@app.route('/calc')
+def calc():
+    return render_template('calc.html')
+
+
 @app.route('/about')
 def about():
     return render_template('about.html')
